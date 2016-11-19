@@ -1,36 +1,39 @@
 {
-  "pages":[
+  "pages": [
     "pages/main/main",
-    "pages/logs/logs",
+    "pages/merchants/merchants",
+    "pages/owner/owner",
     "pages/index/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F43045",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"white"
+    "navigationBarTitleText": "修车人",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "borderStyle": "white",
     "color": "#525252",
     "selectedColor": "#F43045",
-    "list": [{
-      "pagePath": "pages/main/main",
-      "text": "首页",
-      "iconPath": "resources/tabbar/1.png",
-      "selectedIconPath": "resources/tabbar/1-selected.png"
-    },
-    {
-      "pagePath": "pages/logs/logs",
-      "text": "商家",
-      "iconPath": "resources/tabbar/2.png",
-      "selectedIconPath": "resources/tabbar/2-selected.png"
-    },
-    {
-      "pagePath": "pages/index/index",
-      "text": "个人中心",
-      "iconPath": "resources/tabbar/3.png",
-      "selectedIconPath": "resources/tabbar/3-selected.png"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "首页",
+        "iconPath": "resources/tabbar/1.png",
+        "selectedIconPath": "resources/tabbar/1-selected.png"
+      },
+      {
+        "pagePath": "pages/merchants/merchants",
+        "text": "商家",
+        "iconPath": "resources/tabbar/2.png",
+        "selectedIconPath": "resources/tabbar/2-selected.png"
+      },
+      {
+        "pagePath": "pages/owner/owner",
+        "text": "个人中心",
+        "iconPath": "resources/tabbar/3.png",
+        "selectedIconPath": "resources/tabbar/3-selected.png"
+      }
+    ]
   }
 }
