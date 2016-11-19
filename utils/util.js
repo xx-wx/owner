@@ -52,12 +52,8 @@ function base64encode(str){
   }
   return out;
 }
-function code(){
-  return base64encode("xiucheren-client-owner-ios:1a2730fc771f359db9ebe14b45b02705");
-}
 
 module.exports = {
   formatTime: formatTime,
   base64encode: base64encode,
-  code:code
 }
