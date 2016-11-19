@@ -11,7 +11,6 @@ Page({
         // success
       }
     })
-    wx.navig
   },
   onReady:function(){
     // 页面渲染完成
