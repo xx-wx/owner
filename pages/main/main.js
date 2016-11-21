@@ -14,37 +14,12 @@ Page({
         // success
       }
     })
-    // let code = "Basic " + util.base64encode("xiucheren-client-owner-ios:1a2730fc771f359db9ebe14b45b02705")
-    // console.log(code)
-    // wx.request({
-    //   url: 'https://api.xiucheren.net/oauth/token?grant_type=client_credentials',
-    //   method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-    //   header: {
-    //     "Authorization": code,
-    //     "username":"xiucheren-client-owner-ios",
-    //     "password":"1a2730fc771f359db9ebe14b45b02705",
-
-    //   }, // 设置请求的 header
-    //   success: function (res) {
-    //     // success
-    //     console.log(res)
-    //   },
-    //   fail: function () {
-    //     console.log('fail')
-
-    //   },
-    //   complete: function () {
-    //     // complete
-    //     console.log('complete')
-
-    //   }
-    // })
-    Api.token("https://api.xiucheren.net/oauth/token", (res) => {
-      console.log("main", res)
-    }, (e) => {
-      console.log("main", e)
-
-    })
+   Api.POST(Api.Url("/owner/getRecommend.jhtml"),{"baiduCode":268},(res)=>{
+     console.log(res)
+   },(e)=>{
+     console.log(e)
+   })
+ 
   },
   onReady: function () {
     // 页面渲染完成
