@@ -1,0 +1,23 @@
+<view class="content">
+  <view>
+     <swiper indicator-dots="true" autoplay= "true">
+        <block wx:for="{{hotInfoList}}">
+          <swiper-item>
+            <image src = "{{item.imageUrl}}" class = "hotInfo-image"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+  </view>
+  <view class = "section"></view>
+  <view class="mainsection">
+    <view class ="main-buttons">
+      <view class="main-button" wx:for="{{buttons}}">
+        <image class = "main-button-img" src="{{item.src}}" mode = "aspectFit"></image>
+        <text class = "main-button-title">{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="gray-line"></view> 
+
+
+</view>
