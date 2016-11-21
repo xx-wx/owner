@@ -15,15 +15,13 @@ Page({
     let code = "Basic " + util.base64encode("xiucheren-client-owner-ios:1a2730fc771f359db9ebe14b45b02705")
     console.log(code)
     wx.request({
-      url: 'https://api.xiucheren.net/oauth/token',
-      data: {
-        grant_type: "client_credentials",
-      },
+      url: 'https://api.xiucheren.net/oauth/token?grant_type=client_credentials',
       method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       header: {
         "Authorization": code,
-        "Content-Type":"application/x-www-form-urlencoded",
-        "Accept":"application/json"
+        "username":"xiucheren-client-owner-ios",
+        "password":"1a2730fc771f359db9ebe14b45b02705",
+        
       }, // 设置请求的 header
       success: function (res) {
         // success
