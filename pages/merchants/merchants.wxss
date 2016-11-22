@@ -1,0 +1,46 @@
+.searchBar{
+    width: 100%;
+    height: 44px;
+    float: left;
+    display: flex;
+    background-color:white;
+}
+.searchTextField{
+ 
+ float: left; 
+
+ 
+ display: flex;
+
+}
+.leftMap{
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+.rightMsg{
+    width: 40px;
+    height: 40px;
+    float: right; 
+    margin-right: 0px;
+}
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: rgb(232, 232, 232);
+    top: 44px;
+    position: relative;
+}
+.table{
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+  top: 45px;
+  width: 100%;
+  height: 100%;
+}
+.merchantItem{
+    width: 100%;
+    height: 200px;
+    
+}
