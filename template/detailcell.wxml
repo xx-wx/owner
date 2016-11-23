@@ -1,0 +1,8 @@
+<template name = "detailcell" class="detailcell" >
+    <view style = "padding:13px 10px;">
+         <text class = "detailcell-title" >{{title}}</text>
+        <image class = "detailcell-img" src="../../resources/main/arrow-grey@2x.png" ></image>
+        <text class = "detailcell-sub">{{detail}}</text>
+    </view>
+   
+</template>

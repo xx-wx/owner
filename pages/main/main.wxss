@@ -1,4 +1,10 @@
-
+@import "../../template/detailcell.wxss";
+@import "../../template/shopitem.wxss";
+@import "../../app.wxss";
+.content{
+    font-size: 14px;
+    color: #999;
+}
 .hotInfo-image{
     width: 100%
 }
@@ -11,12 +17,12 @@
 .main-buttons{
     margin-top:10px;
     display: block;
+    height: 85px;
 }
 .gray-line{
     background-color: rgb(244, 244,244);
     width: 100%;
     height: 1px;
-    margin-top:95px; 
 }
 .main-button{
     width: 25%;
@@ -28,7 +34,98 @@
     height: 50px;
 }
 .main-button-title{
-    font-size: 14px;
     margin-top:10px; 
     display: block;
+}
+.main-h-items{
+    height: 60px;
+}
+.main-h-item{
+    width: 50%;
+    float: left;
+    overflow: hidden;
+
+    
+}
+.main-h-img{
+    width: 72px;
+    height: 18px;
+    display: block;
+    margin: 10px;
+}
+.main-h-text{
+    margin: 10px;
+    height: 14px;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+
+
+}
+.main-h-line{
+    background-color: rgb(244, 244,244);
+    width: 1px;
+    height: 40px;
+    margin-left: 50%;
+    position: relative;
+    top: 10px;
+}
+
+.main-hotInfoCenter{
+    height: 70px;
+}
+
+.hotinfocenter-image{
+    width: 70px;
+    height: 70px;
+    float: left;
+}
+.main-hotInfoCenter-swiper{
+    height: 100%;
+}
+.main-hotInfoCenter-title{
+    display: block;
+    color: #333;
+    font-size: 15px;
+    margin: 10px;
+}
+.main-hotInfoCenter-sub{
+    display: block;
+    margin: 10px;
+}
+.main-mechanic{
+    height: 60px; 
+}
+.main-mechanics{
+    width: calc(50% - 20px);
+    float: left;
+    margin: 15px 10px;
+}
+.main-mechanics-img{
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+.main-mechanics-texts{
+    margin: 0px 10px;
+
+    height: 38px;
+    overflow: hidden;
+}
+.main-mechanics-title{
+    color: #333;
+    font-size:14px; 
+
+}
+.main-mechanics-sub{
+    color: #999;
+    font-size:13px; 
+    display: block;
+    margin-top: 10px; 
+}
+.main-mechanics-gray-text{
+    background-color: #e0e0e0;
+    text-align: center;
+    width: 100%;
+    padding: 15px 0px;
 }

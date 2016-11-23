@@ -1,4 +1,7 @@
+<import src=  "../../template/detailcell.wxml" />
+<import src = "../../template/shopitem.wxml"/>
 <view class="content">
+  <scroll-view scroll-y="true">
   <view>
      <swiper indicator-dots="true" autoplay= "true">
         <block wx:for="{{hotInfoList}}">
@@ -16,8 +19,55 @@
         <text class = "main-button-title">{{item.title}}</text>
       </view>
     </view>
+    <view class="gray-line"></view> 
+    <view class = "main-h-items">
+      <view class = "main-h-item" wx:for="{{h_items}}">
+        <image class = "main-h-img" src="{{item.src}}" ></image>
+        <text class = "main-h-text">{{item.title}}</text>
+      </view>
+      <view  class = "main-h-line"> </view>
+    </view>
+    <view class="gray-line"></view> 
   </view>
+  <view class = "section"></view>
+  <view class = "main-hotInfoCenter">
+     <swiper class = "main-hotInfoCenter-swiper" indicator-dots="true" autoplay= "true" >
+        <block wx:for="{{HotInfoCenterList}}">
+          <swiper-item>
+            <view>
+                <image src = "{{item.imageUrl}}" class = "hotinfocenter-image"></image>
+                <text class = "main-hotInfoCenter-title">{{item.name}}</text>
+                <text class = "main-hotInfoCenter-sub">{{item.remark}}</text>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+  </view>
+  <view class = "section"></view>
+  <template is="detailcell" data="{{title:'推荐技师',detail:'全部技师'}}" />
   <view class="gray-line"></view> 
+  <view class= "main-mechanic">
+    <view class= "main-mechanics" wx:for="{{mechanics}}">
+        <image class= "main-mechanics-img" src="{{item.avatar}}"></image>
+        <view  class= "main-mechanics-texts">
+          <text class= "main-mechanics-title">{{item.name + item.skillLevel}}</text>
+          <text class= "main-mechanics-sub">{{'主修'+ item.vehicleMakes}}</text>
+        </view>
+    </view>
+  </view>
+   <view class = "main-mechanics-gray-text">
+        <text >{{shopCount+ "个汽修站入住平台,"+rentShopCount+"个分时租赁站提供平台"}}</text>
+    </view>
+    <template is="detailcell" data="{{title:'推荐商家',detail:'全部商家'}}" />
+    <view class="gray-line"></view> 
+    <view >
+      <template  is ="shopitem" wx:for="{{shopList}}" data = "{{name:item.name,imageUrl:item.imageUrl,categorieAbbrs:item.categorieAbbrs,address:item.address,isRentShop:item.isRentShop,insurance:item.insurance}}"></template>
+    </view>
+    <block>
+          <view class = "weui-loading">
+          </view>
+                      <text>上拉加载更多...</text>
 
-
+    </block>
+</scroll-view>
 </view>

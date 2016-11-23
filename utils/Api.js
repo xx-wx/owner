@@ -1,6 +1,6 @@
 var util = require('./util.js')
-let base = "https://api.xiucheren.net";
-
+let isDev = false
+let base = isDev ? "http://192.168.1.6:8000/api" : "https://api.xiucheren.net";
 
 function Url(s) {
   return base + s
@@ -15,6 +15,7 @@ function token(url, success, fail) {
     if (urls.length > 2) {
       host = urls[0] + "//" + urls[1] + urls[2]
     }
+    
     wx.getStorage({
       key: host,
       success: function (res) {
@@ -81,7 +82,6 @@ function request(url, method, data, success, fail) {
     }
     var parameters = new Array()
     for (var p in data) {
-      console.log(p, data[p])
       let ss = p + "=" + data[p]
       parameters.push(ss)
     }
@@ -91,7 +91,6 @@ function request(url, method, data, success, fail) {
     console.log(url)
     wx.request({
       url: url,
-      data: data,
       method: method, // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       header: header, // 设置请求的 header
       success: function (res) {

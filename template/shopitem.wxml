@@ -1,0 +1,26 @@
+<template name = "shopitem" class = "shopitem">
+    <view class = "shopitem-con">
+        <view class ="shopitem-photos">
+            <image class ="shopitem-photo" src="{{imageUrl}}" ></image>
+            <image class ="shopitem-zhengping" src="../../resources/main/正品联盟@2x.png"></image>
+        </view>
+        <view class ="shopitem-info">
+            <text>{{name}}</text>
+            <view class = "shopitem-abbrs">
+                <text class = "shopitem-abbr" wx:for="{{categorieAbbrs}}" style = "background-color:{{item.color}}">{{item.abbr}}</text>
+            </view>
+            <text class="shopitem-address">{{address}}</text>
+        </view>
+        <view class = "shopitem-buttom">
+                <view class = "shopitem-buttom-item">
+                    <image class = "shopitem-buttom-item-img" src="../../resources/main/保障金@2x.png"></image>
+                    <text class = "shopitem-buttom-item-text">{{['1000', '2000', '5000', '2万', '5万', '', '20万'][insurance]}}</text>
+                </view>
+                 <view wx:if="{{isRentShop}}"  class = "shopitem-buttom-item">
+                    <image class = "shopitem-buttom-item-img" src="../../resources/main/时间@2x.png"></image>
+                    <text class = "shopitem-buttom-item-text">分时租赁站</text>
+                </view>
+            </view>
+    </view>
+    <view class="gray-line"></view> 
+</template>
