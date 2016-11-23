@@ -1,6 +1,22 @@
 <!--merhcants.wxml-->
-<view>
-<image></image>
-<input></input>
-<image></image>
+<view class = "searchBar">
+<image class = "leftMap" src = "{{mapIcon}}">  </image>
+<input class = "searchTextField" placeholder = "{{placeholder}}" ></input>
+
+<image class = "rightMsg" src = "{{msgIcon}}" ></image>
 </view>
+<view class = "line" ></view>
+<block wx:if = "{{isLoading}}" >
+
+</block>
+<block wx: else>
+
+<scroll-view class = "table" scroll-y="true">
+<block wx:for-items="{{merchants}}" for-item="{{merchant}}">
+<view class = "merchantItem" > {{hehe}} </view>
+</block>
+
+
+</scroll-view>
+
+</block>
