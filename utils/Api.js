@@ -6,7 +6,27 @@ function Url(s) {
   return base + s
 }
 
+function geocoder(location,success,fail){
+  wx.request({
+    url: 'http://api.map.baidu.com/geocoder/v2/?callback=renderReverse&location=' + location + '&output=json&pois=1&ak=UpKrxMn4ULOteRImfgXKGRRyPS5IQRUy',
+    method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+    header: { 'Content-Type': 'application/json' },
+    success: function(res){
+      // success
+     let poi =  res.data.slice(29,res.data.length-1)
+     console.log(JSON.parse(poi))
+      success(JSON.parse(poi))
 
+    },
+    fail: function(e) {
+      // fail
+       console.log(e)
+    },
+    complete: function() {
+      // complete
+    }
+  })
+}
 function token(url, success, fail) {
   if (url.indexOf("https") == 0) {
     let urls = new Array()
@@ -121,6 +141,7 @@ function GET(url, data, success, fail) {
 
 module.exports = {
   Url: Url,
+  geocoder:geocoder,
   POST: POST,
   GET: GET
 

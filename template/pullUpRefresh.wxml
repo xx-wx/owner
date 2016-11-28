@@ -1,0 +1,6 @@
+<template name = "pullUpRefresh">
+    <view class = "pullUpRefresh-con">
+        <view class = "weui-loading"></view>
+        <text class = "pullUpRefresh-text">上拉加载更多...</text>
+    </view>
+</template>

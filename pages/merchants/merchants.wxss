@@ -1,46 +1,55 @@
+@import "../../template/shopitem.wxss";
+@import "../../template/pullUpRefresh.wxss";
+
+.con{
+    overflow: hidden;
+}
+.merhcants-address{
+    padding: 10px;
+    background-color: rgb(232, 232, 232);
+    color: #999;
+    display: block;
+    font-size: 13px;
+    text-align: center;
+}
 .searchBar{
-    width: 100%;
-    height: 44px;
-    float: left;
-    display: flex;
+    width: calc(100% - 10px);
+    height: 24px;
     background-color:white;
+    margin: 10px;
 }
 .searchTextField{
- 
- float: left; 
-
- 
- display: flex;
-
+    float: left; 
+    border: 1px solid rgb(232, 232, 232);
+    font-size: 14px;
+    background-color: rgb(240, 240, 240);
+    margin-left: 10px;
+    margin-right: 10px; 
+    border-radius: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: calc(100% - 44px - 44px - 20px);
 }
 .leftMap{
-    width: 40px;
-    height: 40px;
+    width: 24px;
+    height: 24px;
     float: left;
 }
 .rightMsg{
-    width: 40px;
-    height: 40px;
-    float: right; 
-    margin-right: 0px;
+    width: 24px;
+    height: 24px;
+    float: left; 
 }
 .line{
     width: 100%;
     height: 1px;
     background-color: rgb(232, 232, 232);
-    top: 44px;
-    position: relative;
 }
 .table{
-    display: flex;
-    flex-direction: column;
-  align-items: center;
-  top: 45px;
-  width: 100%;
-  height: 100%;
+    width: 100%;
+  overflow-x: hidden;
 }
 .merchantItem{
     width: 100%;
     height: 200px;
-    
 }
